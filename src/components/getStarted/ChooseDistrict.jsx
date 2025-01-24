@@ -46,7 +46,7 @@ const ChooseDistrict = () => {
         className={`${
           isOpen
             ? "border-[#8F49DE80]"
-            : "border-transparent hover:border hover:border-[#722e79ef]"
+            : "border-transparent hover:cursor-pointer hover:border-[#722e79ef]"
         } border-4  bg-white flex items-center justify-between rounded-xl px-6 py-2 w-full text-[#5A5D6C]`}
       >
         {/* ekranda seçilenleri gösteriyoruz */}
@@ -58,7 +58,9 @@ const ChooseDistrict = () => {
         )}
       </button>
 
-      {isOpen && (
+      {isOpen && 
+      // arama alanı
+      (
         <div className=" bg-white border rounded mt-1 w-full z-10 text-[#262527]">
           <div className="px-4 py-2 flex gap-2 border-b-2">
             <img src="/getStarted/search.svg" alt="search" color="#5A5D6C" />
@@ -70,14 +72,15 @@ const ChooseDistrict = () => {
               className="w-full text-[#262527] placeholder-[#5A5D6C] outline-none text-sm"
             />
           </div>
+          {/* seçenekleri listelemek için  */}
           <div className="h-60 overflow-y-auto shortDistrict">
             {filteredOptions.map((option) => (
               <div
                 key={option}
-                className="flex items-center hover:bg-slate-50 gap-2 px-4 py-2 accent-purple-700"
+                className="flex items-center hover:bg-slate-50  gap-2 px-4 py-2 accent-purple-700"
               >
                 <input
-                  className="w-5 h-5 rounded-xl font-medium text-sm"
+                  className="w-5 h-5 rounded-xl font-medium text-sm hover:cursor-pointer"
                   type="checkbox"
                   checked={selectedOptions.includes(option)}
                   onChange={() => handleCheckboxChange(option)}
