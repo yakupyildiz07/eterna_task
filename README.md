@@ -13,7 +13,7 @@ The task was to develop an onboarding flow and homepage interface for a mobile-f
 
 You can view the sample screens from the task below:
 <p align="center">
-  <img src="/task_ui.png" alt="UI Screens" width="100%" />
+  <img src="./public/task_ui.png" alt="UI Screens" width="100%" />
 </p>
 
 > ⚠️ This repository contains only task-specific code provided as part of the hiring process.
